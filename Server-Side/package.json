@@ -1,0 +1,26 @@
+{
+  "name": "lilongwa-server-side",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+	"prestart": "npm run build",
+    "start": "node ./build/index.js",
+	"preserve": "npm run build",
+    "serve": "concurrently \"npx tsc --watch\" \"nodemon ./build/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.25",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.2"
+  }
+}
